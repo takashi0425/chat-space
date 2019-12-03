@@ -1,26 +1,26 @@
-.wrapper
-  .chat-main
-    .main-header
-      .main-header__left-box
-        .main-header__left-box__current-group
+%wrapper
+  %div.chat-main
+    %div.main-header
+      %div.main-header__left-box
+        %h2.main-header__left-box__current-group
           test
-        .main-header__left-box__member-list
+        %ul.main-header__left-box__member-list
           Member : taka
-          .main-header__left-box__menber-list__menber
-            .menber1
-      .a{href: '#'}
-        .main-header__edit-btn Edit
-    .messages
-      .message
-        .message__upper-info
-          .message__upper-info__talker User name
-          .message__upper-info__date 0000/00/00(Fri) 00:00:00
-        .message__text Message
-    .form
-      .new_message
-        .input-box
-          .input-box__text{:type => 'text', :value => '', :name => 'massage[content]', :placeholder => 'type a message'}
-            .label{class: "input-box__image"}
-              .fa.fa-image
-                .input{type: "file"}
-        .input.submit-btn{:type => 'submit', :value => 'Send', :name => 'commit'}
+          %li.main-header__left-box__menber-list__menber
+            %menber1
+      = link_to "#" do
+        %div.main-header__edit-btn Edit
+    %div.messages
+      %div.message
+        %div.message__upper-info
+          %p.message__upper-info__talker User name
+          %p.message__upper-info__date 0000/00/00(Fri) 00:00:00
+        %p.message__text Message
+    %div.form
+      %div.new_message
+        %div.input-box
+          %input.input-box__text{ type: "text", value: "", name: "massage[content]", placeholder: "type a message"}
+            %label{class: "input-box__image"}
+              %i.fa.fa-image
+                %input{type: "file"}
+        %input.submit-btn{ type: "submit", value: "Send", name: "commit"}
