@@ -8,10 +8,11 @@
         = link_to "#" do
           =icon('fa', 'cog', class: "side-header__box__menu__edit-user")
   .groups
-    .group
-      = link_to "#" do
-        .group__group-name
-          techcamp
-        .group__latest-message
-          まだメッセージがありません
+    - current_user.groups.each do |group|
+      .group
+        = link_to "#" do
+          .group__group-name
+            techcamp
+          .group__latest-message
+            まだメッセージがありません
     
