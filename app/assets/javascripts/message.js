@@ -1,6 +1,5 @@
 $(function(){ 
   function buildHTML(message){
-    console.log(message)
     image = ( message.image ) ? `<img class= "lower-message__image" src=${message.image} >` : "";
       var html =
         `<div class="message" data-message-id=${message.id}>
@@ -73,8 +72,8 @@ $(function(){
       $(".form__submit").prop("disabled", false);
     }
   })
-    .fail(function() {
-      console.log('自動更新に失敗しました');
+    .fail(function(data){
+      alert('自動更新に失敗しました');
     });
   };
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
